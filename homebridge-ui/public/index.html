@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="css/style.css">
+
+<div id="welcome" class="card card-body">
+    <h1>Philips TV SaphiOS Homebridge Plugin</h1>
+    <h2>Configuration Wizard</h2>
+
+    <div id="tvs">
+      <button id="connectNewTV" type="submit" class="btn btn-primary center-it">Pair new TV</button>
+    </div>
+    <hr/>
+    <button id="parameterEditor" type="submit" class="btn center-it">Parameter Editor</button>
+</div>
+
+<div id="instructions" class="card card-body">
+    <h1>Instructions</h1>
+    <div>
+        <p>This application pairs with Philips TV SaphiOS.
+        </p>
+        Go to:
+        <ol>
+            <li>TV Settings</li>
+            <li>Network</li>
+            <li>Wired network or Wi-Fi</li>
+            <li>Show network settings</li>
+        </ol>
+        On the TV screen you will see two pieces of information required to be provided to the plugin:
+        <ul>
+            <li>IPv4 Address of TV. Necessary for the pairing process and all later interactions with TV.</li>
+            <li>MAC Address (Wired or Wireless). Necessary for Wake over LAN features. (Turning the TV on from deep sleep).
+            </li>
+        </ul>
+        On the same level in Settings as "Show network settings", you should find WoWLAN settings - make sure that it's
+        enabled if you want to use the Wake over Wireless LAN feature.
+    </div>
+
+    <button class="startPairingProcess btn btn-primary center-it">Start Pairing Process</button>
+</div>
+
+<div id="pairing" class="card card-body">
+    <h1>Pairing</h1>
+    <div>
+      To start the pairing process, be in front of the TV, and provide a TV's IPv4 Address.
+    </div>
+    <form>
+        <fieldset>
+            <legend>Basic Connection Parameters</legend>
+            <div>
+                <label for="name">Name (mandatory)</label>
+                <input type="text" id="name" class="form-control" placeholder="Living Room TV" />
+            </div>
+            <div>
+                <label for="ip">IPv4 Address (mandatory)</label>
+                <input type="text" id="ip" class="form-control" placeholder="192.168.0.123" />
+            </div>
+            <div>
+                <label for="mac">MAC Address (mandatory)</label>
+                <input type="text" id="mac" class="form-control" placeholder="FF:FB:DD:FF:CC:00" />
+            </div>
+            <div>
+                <label for="sources">Sources Btn</label>
+                <div style="display:flex; flex-direction: row; justify-content: flex-start;">
+                    <input type="checkbox" id="sources" class="form-control" style="flex: 1; margin-right: 10px;"/>
+                    <span style="flex: 11; padding-top: 6px;">Switch sources (HDMI1 / HDMI1 / HDMI3)</span>
+                </div>
+            </div>
+            <div class="hdmi">
+                <label for="hdmi1">Name HDM1</label>
+                <input type="text" id="hdmi1" class="form-control" placeholder="HDM1" />
+            </div>
+            <div class="hdmi">
+                <label for="hdmi2">Name HDM2</label>
+                <input type="text" id="hdmi2" class="form-control" placeholder="HDM2" />
+            </div>
+            <div class="hdmi">
+                <label for="hdmi3">Name HDM3</label>
+                <input type="text" id="hdmi3" class="form-control" placeholder="HDM3" />
+            </div>
+        </fieldset>
+    </form>
+    <button id="startPair" type="submit" class="btn btn-primary center-it">Start Pairing</button>
+</div>
+
+<div id="pairSuccess" class="card">
+    <h1>Thanks for configuring plugin</h1>
+    <p>Please click on save and restart homebridge when it's indicated</p>
+</div>
+
+<div id="config" class="card">
+    <h1>Configuration Editor</h1>
+    <button class="startPairingProcess btn btn-primary center-it">Re pair TV</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
