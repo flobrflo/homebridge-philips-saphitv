@@ -4,38 +4,47 @@
     "singular": true,
     "customUi": true,
     "schema": {
-        "tvs": {
-            "type": "array",
-            "items": {
-                "title": "TV",
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "title": "TV's Name",
-                        "type": "string",
-                        "description": "The HomeKit name of your TV.",
-                        "minLength": 1,
-                        "required": true,
-                        "default": "Living Room TV"
-                    },
-                    "ip": {
-                        "title": "TV's IP Address",
-                        "description": "The IP Address of your TV.",
-                        "type": "string",
-                        "format": "ipv4",
-                        "required": true
-                    },
-                    "mac": {
-                        "title": "TV's MAC Address",
-                        "description": "The MAC Address of your TV. Used to wake TV over WiFi. WoWiFi have to be enabled on TV in network settings.",
-                        "type": "string",
-                        "required": true
-                    },
-                    "sources": {
-                        "title": "Dedicated Source Switch",
-                        "description": "If enabled plugin register additional Switch Service that will update sources. Might be useful when setting scenes.",
-                        "type": "boolean",
-                        "default": "false"
+       "type": "object",
+        "properties": {
+            "name": {
+                "description": "Plugin name as displayed in the Homebridge log.",
+                "type": "string",
+                "required": true,
+                "default": "Hue"
+            },
+            "tvs": {
+                "type": "array",
+                "items": {
+                    "title": "TV",
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "title": "TV's Name",
+                            "type": "string",
+                            "description": "The HomeKit name of your TV.",
+                            "minLength": 1,
+                            "required": true,
+                            "default": "Living Room TV"
+                        },
+                        "ip": {
+                            "title": "TV's IP Address",
+                            "description": "The IP Address of your TV.",
+                            "type": "string",
+                            "format": "ipv4",
+                            "required": true
+                        },
+                        "mac": {
+                            "title": "TV's MAC Address",
+                            "description": "The MAC Address of your TV. Used to wake TV over WiFi. WoWiFi have to be enabled on TV in network settings.",
+                            "type": "string",
+                            "required": true
+                        },
+                        "sources": {
+                            "title": "Dedicated Source Switch",
+                            "description": "If enabled plugin register additional Switch Service that will update sources. Might be useful when setting scenes.",
+                            "type": "boolean",
+                            "default": "false"
+                        }
                     }
                 }
             }
