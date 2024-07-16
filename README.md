@@ -20,7 +20,7 @@ With this package we actually can manage On/Off status and Sources HDMI.
 ### Installation
 
 - Install homebridge using: npm install -g homebridge
-- Install this plugin using: npm install -g  `homebridge-philips-saphitv`
+- Install this plugin using: npm install -g  `homebridge-philipstv-saphitvos`
 - Update your configuration.
 
 Prefer use homebridgeUI to configure plugin.

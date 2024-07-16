@@ -1,6 +1,6 @@
 {
   "displayName": "Philips TV SaphiOS",
-  "name": "homebridge-philips-saphitv",
+  "name": "homebridge-philipstv-saphitvos",
   "author": "flobrflo",
   "version": "1.0.0",
   "description": "Manage your Philips TV with homebridge",
@@ -8,10 +8,10 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flobrflo/homebridge-philips-saphitv.git"
+    "url": "git+https://github.com/flobrflo/homebridge-philipstv-saphitvos.git"
   },
   "bugs": {
-    "url": "https://github.com/flobrflo/homebridge-philips-saphitv/issues"
+    "url": "https://github.com/flobrflo/homebridge-philipstv-saphitvos/issues"
   },
   "engines": {
     "node": "^18.17.0 || ^20.9.0",

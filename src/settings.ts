@@ -6,4 +6,4 @@ export const PLATFORM_NAME = 'PhilipsTVSaphiOS';
 /**
  * This must match the name of your plugin as defined the package.json
  */
-export const PLUGIN_NAME = 'homebridge-philips-saphitv';
+export const PLUGIN_NAME = 'homebridge-philipstv-saphitvos';
